@@ -23,8 +23,8 @@ import {
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Command, CommandItem, CommandList } from "../ui/command";
 import { CommandGroup } from "cmdk";
-import { getItemsFromMarket, postItem } from "@/app/dashboard/items/actions";
-import type { Item, MarketItem } from "@/app/dashboard/items/actions.d";
+import { getItemsFromMarket, postItem } from "@/app/items/actions";
+import type { Item, MarketItem } from "@/app/items/actions";
 import {
   Table,
   TableBody,

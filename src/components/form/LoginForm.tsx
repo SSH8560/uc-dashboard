@@ -14,6 +14,7 @@ import {
 } from "../ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { login } from "@/app/login/actions";
+import { useState } from "react";
 
 const loginSchema = z.object({
   email: z.string().email(),
@@ -26,9 +27,15 @@ export default function LoginForm() {
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
   });
+  const [error, setError] = useState<string | null>(null);
 
-  const onSubmit = ({ email, password }: z.infer<typeof loginSchema>) =>
-    login(email, password);
+  const onSubmit = async ({ email, password }: z.infer<typeof loginSchema>) => {
+    try {
+      await login(email, password);
+    } catch (e) {
+      setError("비밀번호 또는 이메일을 확인해주세요");
+    }
+  };
 
   return (
     <Form {...form}>
@@ -59,6 +66,7 @@ export default function LoginForm() {
               </FormItem>
             )}
           />
+          {error && <span className="red">{error}</span>}
         </div>
 
         <Button type="submit">로그인</Button>

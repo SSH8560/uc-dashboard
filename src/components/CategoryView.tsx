@@ -42,6 +42,13 @@ export default function CategoryView({
     ? filterCategoriesByParent(subCategory.id)
     : [];
 
+  const handleClickMajorCategory = (majorCategory: Category) => {
+    setMajorCategory(majorCategory);
+    setSubCategory(null);
+  };
+  const handleClickSubCategory = (subCategory: Category) => {
+    setSubCategory(subCategory);
+  };
   const handleClickDetailedCategory = (detailedCategory: Category) => {
     setDetailedCategory(detailedCategory);
     onClickDetailedCategory &&
@@ -61,12 +68,12 @@ export default function CategoryView({
           <CategorySection
             label="대분류"
             categories={majorCategories}
-            onClickCategory={setMajorCategory}
+            onClickCategory={handleClickMajorCategory}
           />
           <CategorySection
             label="중분류"
             categories={subCategories}
-            onClickCategory={setSubCategory}
+            onClickCategory={handleClickSubCategory}
           />
 
           <CategorySection

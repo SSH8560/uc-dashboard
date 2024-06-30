@@ -1,9 +1,4 @@
-import CategoryView from "@/components/CategoryView";
 import { getCategories } from "./actions";
-import { Category } from "./actions.d";
-import CategoryBranch from "@/components/CategoryTreeBranch";
-import TreeView from "react-accessible-treeview";
-import { Label } from "@/components/ui/label";
 import CategoryTreeView from "@/components/CategoryTreeView";
 
 export default async function Categories() {

@@ -26,7 +26,7 @@ interface ItemTableProps<TData, TValue> {
   data: TData[];
 }
 
-export default function ItemTabl<TData, TValue>({
+export default function ItemTable<TData, TValue>({
   data,
   columns,
 }: ItemTableProps<TData, TValue>) {
@@ -55,7 +55,6 @@ export default function ItemTabl<TData, TValue>({
     initialState: {
       pagination: {
         pageIndex: 0,
-        pageSize: 1,
       },
     },
   });

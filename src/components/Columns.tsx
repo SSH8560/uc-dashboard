@@ -11,7 +11,7 @@ import {
 } from "./ui/dropdown-menu";
 import { ArrowDown, ArrowUp, ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { Button } from "./ui/button";
-import { Item } from "@/app/dashboard/items/actions.d";
+import { Item } from "@/app/items/actions";
 import { ColumnDef, SortDirection } from "@tanstack/react-table";
 import { Label } from "./ui/label";
 

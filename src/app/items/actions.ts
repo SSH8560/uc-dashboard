@@ -1,7 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/apis/supabase/server";
-import type { Item, MarketItem, PostItemParam } from "./actions.d";
+import type { Item, MarketItem, PostItemParam } from "./actions";
 import type { Page } from "@/lib/apis/martApi/definition.d";
 
 export const getItemsFromMarket: ({

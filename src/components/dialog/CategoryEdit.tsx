@@ -15,7 +15,7 @@ import {
   createCategory,
   deleteCategory,
   updateCategory,
-} from "@/app/dashboard/categories/actions";
+} from "@/app/categories/actions";
 
 interface CategoryEditProps {
   open: boolean;
