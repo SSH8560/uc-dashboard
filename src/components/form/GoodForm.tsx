@@ -24,7 +24,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Command, CommandItem, CommandList } from "../ui/command";
 import { CommandGroup } from "cmdk";
 import { getItemsFromMarket, postItem } from "@/app/items/actions";
-import type { Item, MarketItem } from "@/app/items/actions";
+import type { Item, MarketItem } from "@/app/items/actions.d";
 import {
   Table,
   TableBody,
@@ -37,8 +37,8 @@ import {
 import { Label } from "../ui/label";
 import ImagePreview from "../ImagePreview";
 import CategoryView, { CategoryHierarchy } from "../CategoryView";
-import { Category } from "@/app/dashboard/categories/actions.d";
-import { getCategories } from "@/app/dashboard/categories/actions";
+import { Category } from "@/app/categories/actions.d";
+import { getCategories } from "@/app/categories/actions";
 import {
   Breadcrumb,
   BreadcrumbItem,
